@@ -5,3 +5,4 @@ Projektin tavoitteena on päätellä huonekohtainen läsnäolo epätarkoista ant
 ## Dokumentaatio
 * [Määrittelydokumentti](docs/maarittelydokumentti.md)
 * [Viikkoraportti 1](docs/viikkoraportti_1.md)
+* [Viikkoraportti 2](docs/viikkoraportti_2.md)
