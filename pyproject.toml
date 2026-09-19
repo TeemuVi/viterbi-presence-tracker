@@ -1,0 +1,29 @@
+[project]
+name = "viterbi-presence"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Teemu Vi",email = "teemu.vierros@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[dependency-groups]
+dev = [
+    "pytest (>=9.1.1,<10.0.0)",
+    "pytest-cov (>=7.1.0,<8.0.0)",
+    "coverage (>=7.16.1,<8.0.0)",
+    "pylint (>=4.0.8,<5.0.0)",
+    "autopep8 (>=2.3.2,<3.0.0)"
+]
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-v --cov=src --cov-report=term-missing"

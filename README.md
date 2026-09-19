@@ -1,8 +1,29 @@
-# viterbi-presence-tracker
+# Viterbi Presence Tracker
 
-Tämä projekti on Helsingin yliopiston kurssin *Aineopintojen harjoitustyö: Algoritmit ja tekoäly (TKT20010)* harjoitustyö.
-Projektin tavoitteena on päätellä huonekohtainen läsnäolo epätarkoista anturihavainnoista käyttäen piilotettua Markovin mallia ja itse toteutettua Viterbi-algoritmia.
-## Dokumentaatio
-* [Määrittelydokumentti](docs/maarittelydokumentti.md)
-* [Viikkoraportti 1](docs/viikkoraportti_1.md)
-* [Viikkoraportti 2](docs/viikkoraportti_2.md)
+Kurssin "TKT20010 Harjoitustyö: Algoritmit ja tekoäly" harjoitustyö
+
+Ohjelman idea on päätellä asukkaan todennäköisin sijainti asunnossa käyttäen "Hidden Markov Model" epätarkkojen sensoreiden avulla hyödyntäen Viterbi-algoritmia 
+
+# Asennus ohjeet
+Käytössä on Poetry riippuvuuksien hallintaan [https://python-poetry.org/](https://python-poetry.org/)
+
+Asenna komentorivillä komennolla:
+    poetry install
+
+# Ohjelman suoritus
+Komennolla:
+    poetry run python src/main.py
+Pystyt ajamaan 10 huoneen kodin simulaation joka vertaa Viterbi-algoritmin tulosta siihen että luotettaisiin sensoreiden tuloksiin suoraan sen mukaan missä huoneessa ne ovat.
+
+
+# Testaus
+Komennolla:
+    poetry run pytest
+Visuaalinen raportti:
+    poetry run coverage run -m pytest
+    poetry run coverage html
+Raportti tallennetaan tiedostoon:
+    htmlcov/index.html
+
+Laatu vaatimukset voi tarkistaa komennolla:
+    poetry run pylint src
